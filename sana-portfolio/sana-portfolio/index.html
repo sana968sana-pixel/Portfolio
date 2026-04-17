@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sana Shafique | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+</head>
+<body>
+  <div id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <canvas id="bg"></canvas>
+
+  <header class="header">
+    <a href="#hero" class="logo">Sana.</a>
+
+    <nav class="navbar" id="navbar">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#ai-chat">AI</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span id="themeIcon">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span>Sana Shafique</span></h1>
+      <h2>
+        I am a
+        <span id="typingText" class="typing-text"></span>
+      </h2>
+
+      <p class="hero-description">
+        I build smart and clean digital experiences while learning Artificial Intelligence,
+        Python, data analysis, and modern web development.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="assets/sana-cv.pdf" class="btn btn-cv" download>Download CV</a>
+      </div>
+
+      <div class="socials">
+        <a href="https://github.com/sana968sana-pixel" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/sana-shafique1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-heading">
+      <p class="section-label">About Me</p>
+      <h2>Who I Am</h2>
+    </div>
+
+    <div class="about-card glass-card">
+      <p>
+        I am a Computer Science student with interest in Python, AI, SQL, databases,
+        and web development. I enjoy learning by building projects and improving my
+        problem-solving skills through practical work.
+      </p>
+      <p>
+        Right now, I am focused on growing in Artificial Intelligence, data analysis,
+        and frontend development so I can build useful and professional digital products.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-heading">
+      <p class="section-label">My Skills</p>
+      <h2>What I Work With</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card glass-card">🐍 Python</div>
+      <div class="card glass-card">⚡ JavaScript</div>
+      <div class="card glass-card">🌐 HTML & CSS</div>
+      <div class="card glass-card">🗄️ SQL / MySQL</div>
+      <div class="card glass-card">🍃 MongoDB</div>
+      <div class="card glass-card">📊 NumPy / Pandas</div>
+      <div class="card glass-card">🎨 WordPress</div>
+      <div class="card glass-card">🧰 GitHub / VS Code</div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-heading">
+      <p class="section-label">Projects</p>
+      <h2>Things I Have Built</h2>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-image-card glass-card">
+        <img src="assets/travel-dark.jpg" alt="Python Data Analysis Project" />
+        <div class="project-overlay">
+        <h3>Travel Booking Website</h3>
+        <p>Modern travel UI with booking layout and responsive design.</p>
+          <div class="project-buttons">
+            <a href="#" class="project-btn">Live Demo</a>
+            <a href="https://github.com/sana968sana-pixel" target="_blank" rel="noopener noreferrer" class="project-btn outline-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-image-card glass-card">
+        <img src="assets/data-dashboard.jpg" alt="WordPress Website Projects" />
+        <div class="project-overlay">
+         <h3>Data Analysis Dashboard</h3>
+         <p>Analyzed data using Python (Pandas, NumPy) and visualized insights.</p>
+          <div class="project-buttons">
+          <a href="https://your-demo-link.com" class="project-btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/sana968sana-pixel" target="_blank" rel="noopener noreferrer" class="project-btn outline-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-chat" class="section">
+    <div class="section-heading">
+      <p class="section-label">AI Assistant</p>
+      <h2>Ask Me Anything</h2>
+    </div>
+
+    <div class="chat-wrapper glass-card">
+      <div id="chatBox" class="chat-box">
+        <div class="message bot">
+          Hi! Ask me about Sana’s skills, education, projects, AI learning, or contact details.
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Ask about skills, projects, education..."
+        />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-heading">
+      <p class="section-label">Contact</p>
+      <h2>Let's Connect</h2>
+    </div>
+
+    <div class="contact-card glass-card">
+      <p><strong>Email:</strong> sana968sana@gmail.com</p>
+      <p><strong>Location:</strong> Muridke, Pakistan</p>
+
+      <div class="socials contact-socials">
+        <a href="https://github.com/sana968sana-pixel" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/sana-shafique1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
